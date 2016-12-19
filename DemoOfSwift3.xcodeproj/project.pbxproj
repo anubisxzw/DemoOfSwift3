@@ -17,6 +17,10 @@
 		DB61FB081E07735600982F39 /* DemoOfSwift3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FB071E07735600982F39 /* DemoOfSwift3Tests.swift */; };
 		DB61FB131E07735600982F39 /* DemoOfSwift3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FB121E07735600982F39 /* DemoOfSwift3UITests.swift */; };
 		DB61FB211E07ADB700982F39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FB201E07ADB700982F39 /* LoginViewController.swift */; };
+		DB61FB261E07DAA300982F39 /* PushListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FB241E07DAA300982F39 /* PushListController.swift */; };
+		DB61FB271E07DAA300982F39 /* PushListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB61FB251E07DAA300982F39 /* PushListController.xib */; };
+		DB61FB2A1E07DAF200982F39 /* PushMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FB281E07DAF200982F39 /* PushMessageCell.swift */; };
+		DB61FB2B1E07DAF200982F39 /* PushMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB61FB291E07DAF200982F39 /* PushMessageCell.xib */; };
 		F4BB949A534E1ACAA88256C6 /* Pods_DemoOfSwift3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB8C508BDEC470992542DB1 /* Pods_DemoOfSwift3Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		DB61FB121E07735600982F39 /* DemoOfSwift3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoOfSwift3UITests.swift; sourceTree = "<group>"; };
 		DB61FB141E07735600982F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB61FB201E07ADB700982F39 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DB61FB241E07DAA300982F39 /* PushListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushListController.swift; sourceTree = "<group>"; };
+		DB61FB251E07DAA300982F39 /* PushListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushListController.xib; sourceTree = "<group>"; };
+		DB61FB281E07DAF200982F39 /* PushMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushMessageCell.swift; sourceTree = "<group>"; };
+		DB61FB291E07DAF200982F39 /* PushMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushMessageCell.xib; sourceTree = "<group>"; };
 		ECE002FDA4218F4E23A59873 /* Pods-DemoOfSwift3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOfSwift3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoOfSwift3UITests/Pods-DemoOfSwift3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		EFB86DED588234F7B41DE872 /* Pods_DemoOfSwift3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoOfSwift3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				DB61FB231E07D94100982F39 /* Cells */,
+				DB61FB241E07DAA300982F39 /* PushListController.swift */,
+				DB61FB251E07DAA300982F39 /* PushListController.xib */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -180,6 +190,8 @@
 		DB61FB231E07D94100982F39 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DB61FB281E07DAF200982F39 /* PushMessageCell.swift */,
+				DB61FB291E07DAF200982F39 /* PushMessageCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -306,6 +318,8 @@
 				DB61FAFD1E07735600982F39 /* LaunchScreen.storyboard in Resources */,
 				DB61FAFA1E07735600982F39 /* Assets.xcassets in Resources */,
 				DB61FAF81E07735600982F39 /* Main.storyboard in Resources */,
+				DB61FB2B1E07DAF200982F39 /* PushMessageCell.xib in Resources */,
+				DB61FB271E07DAA300982F39 /* PushListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +485,8 @@
 				DB61FB211E07ADB700982F39 /* LoginViewController.swift in Sources */,
 				DB61FAF51E07735600982F39 /* ViewController.swift in Sources */,
 				DB61FAF31E07735600982F39 /* AppDelegate.swift in Sources */,
+				DB61FB2A1E07DAF200982F39 /* PushMessageCell.swift in Sources */,
+				DB61FB261E07DAA300982F39 /* PushListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
