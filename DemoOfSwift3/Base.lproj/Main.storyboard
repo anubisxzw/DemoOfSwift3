@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="-448.80000000000001" y="47.226386806596707"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Push List Controller-->
         <scene sceneID="aoJ-RM-RUG">
             <objects>
-                <tableViewController id="cdp-Rw-EGy" sceneMemberID="viewController"/>
+                <tableViewController id="cdp-Rw-EGy" customClass="PushListController" customModule="DemoOfSwift3" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIw-Q0-YVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="462" y="348"/>
