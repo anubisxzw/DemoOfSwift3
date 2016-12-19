@@ -116,13 +116,15 @@
                                 <state key="normal" title="登録"/>
                                 <connections>
                                     <action selector="onClick:" destination="LfW-Ft-850" eventType="touchUpInside" id="17C-Ao-Jke"/>
-                                    <segue destination="7WD-n1-CRc" kind="show" id="snm-8V-CEf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="LXW-iq-vDb"/>
+                    <connections>
+                        <segue destination="7WD-n1-CRc" kind="show" identifier="ShowDetail" id="3NU-yk-HUY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJS-13-Nbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
