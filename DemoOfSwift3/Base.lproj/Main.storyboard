@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="462" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="y6e-vV-7in">
             <objects>
-                <viewController id="LfW-Ft-850" sceneMemberID="viewController">
+                <viewController id="LfW-Ft-850" customClass="LoginViewController" customModule="DemoOfSwift3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nIH-Vc-1dM"/>
                         <viewControllerLayoutGuide type="bottom" id="s9x-H7-GUH"/>
@@ -115,6 +115,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登録"/>
                                 <connections>
+                                    <action selector="onClick:" destination="LfW-Ft-850" eventType="touchUpInside" id="17C-Ao-Jke"/>
                                     <segue destination="7WD-n1-CRc" kind="show" id="snm-8V-CEf"/>
                                 </connections>
                             </button>
