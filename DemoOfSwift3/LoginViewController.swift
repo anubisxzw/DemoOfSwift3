@@ -10,12 +10,15 @@ import UIKit
 import Foundation
 import NVActivityIndicatorView
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     // 二重実行防止
     @IBAction func onClick(_ sender: Any) {
         
-        print(NSDate.timeIntervalSinceReferenceDate)
+        let size = CGSize(width: 30, height:30)
+        
+        // マスクかけ
+        startAnimating(size, message: "Loading...", type: NVActivityIndicatorType.ballSpinFadeLoader)
         
         // 遅延キャンセル
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(doOnClick), object: nil)
@@ -28,9 +31,15 @@ class LoginViewController: UIViewController {
     
     @objc private func doOnClick() {
         
-        print(NSDate.timeIntervalSinceReferenceDate)
         // 詳細表示へ
         self.performSegue(withIdentifier: "ShowDetail", sender: nil)
+        
+        // マスクキャンセル
+        self.perform(#selector(delayedStopActivity), with: nil)
     }
     
+    // マスクキャンセル
+    func delayedStopActivity() {
+        stopAnimating()
+    }
 }
