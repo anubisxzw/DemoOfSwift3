@@ -24,12 +24,13 @@ class PushListController: UITableViewController {
     
     override func viewDidLoad() {
         
-        self.delMessages()
-        self.storeMessage(title: "title1", subtitle: "subTitle1")
-        self.storeMessage(title: "title2", subtitle: "subTitle2")
-        self.storeMessage(title: "title3", subtitle: "subTitle3")
-        self.storeMessage(title: "title4", subtitle: "subTitle4")
-        self.storeMessage(title: "title5", subtitle: "subTitle5")
+//        self.delMessages()
+//        self.storeMessage(title: "title1", subtitle: "subTitle1")
+//        self.storeMessage(title: "title2", subtitle: "subTitle2")
+//        self.storeMessage(title: "title3", subtitle: "subTitle3")
+//        self.storeMessage(title: "title4", subtitle: "subTitle4")
+//        self.storeMessage(title: "title5", subtitle: "subTitle5")
+        
         
         // レギストセル
         registCells()

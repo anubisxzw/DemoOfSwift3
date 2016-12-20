@@ -44,6 +44,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(error)
     }
     
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        let aps = userInfo["aps"] as? [String:AnyObject]
+        let alert = aps?["alert"] as? [String:AnyObject]
+        let title = alert?["title"] as? String
+        let body = alert?["body"] as? String
+        
+        self.storeMessage(title: title!, subtitle: body!)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        
+        let aps = userInfo["aps"] as? [String:AnyObject]
+        let alert = aps?["alert"] as? [String:AnyObject]
+        let title = alert?["title"] as? String
+        let body = alert?["body"] as? String
+        
+        self.storeMessage(title: title!, subtitle: body!)
+        
+    }
+    
+    func storeMessage(title:String, subtitle:String){
+        let context = getContext()
+        let entity = NSEntityDescription.entity(forEntityName: "Messages", in: context)
+        let person = NSManagedObject(entity: entity!, insertInto: context)
+        
+        person.setValue(title, forKey: "title")
+        person.setValue(subtitle, forKey: "subtitle")
+        
+        do {
+            try context.save()
+        }catch{
+            print(error)
+        }
+    }
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if #available(iOS 10.0, *) {
+            return appDelegate.persistentContainer.viewContext
+        } else {
+            return appDelegate.managedObjectContext
+        }
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
