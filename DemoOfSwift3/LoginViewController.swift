@@ -12,10 +12,23 @@ import NVActivityIndicatorView
 
 class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
+    @IBOutlet weak var userId: UITextField!
+    @IBOutlet weak var passWord: UITextField!
+    @IBOutlet weak var counter: UILabel!
+    
+    var loginCount: Int = 0
+    
     // 二重実行防止
     @IBAction func onClick(_ sender: Any) {
         
         let size = CGSize(width: 30, height:30)
+        
+        // count up
+        loginCount = loginCount + 1
+        counter.text = String(loginCount)
+        
+        // キーボードクローズ
+        keyboardClose()
         
         // マスクかけ
         startAnimating(size, message: "Loading...", type: NVActivityIndicatorType.ballSpinFadeLoader)
@@ -31,15 +44,29 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     @objc private func doOnClick() {
         
-        // 詳細表示へ
-        self.performSegue(withIdentifier: "ShowDetail", sender: nil)
-        
         // マスクキャンセル
         self.perform(#selector(delayedStopActivity), with: nil)
+    }
+    
+    @IBAction func onClickNormal(_ sender: Any) {
+        
+        // count up
+        loginCount = loginCount + 1
+        counter.text = String(loginCount)
     }
     
     // マスクキャンセル
     func delayedStopActivity() {
         stopAnimating()
+    }
+    
+    // キーボードクローズ
+    @IBAction func tapViewAction(_ sender: UIControl) {
+        keyboardClose()
+    }
+
+    func keyboardClose(){
+        userId.resignFirstResponder()
+        passWord.resignFirstResponder()
     }
 }
