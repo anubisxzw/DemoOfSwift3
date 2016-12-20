@@ -86,7 +86,11 @@ class PushListController: UITableViewController {
     
     func getContext () -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
+        if #available(iOS 10.0, *) {
+            return appDelegate.persistentContainer.viewContext
+        } else {
+            return appDelegate.managedObjectContext
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -50,13 +50,10 @@
 		6B429D309CACF661C6A575C8 /* Pods-DemoOfSwift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOfSwift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoOfSwift3/Pods-DemoOfSwift3.release.xcconfig"; sourceTree = "<group>"; };
 		6FB8C508BDEC470992542DB1 /* Pods_DemoOfSwift3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoOfSwift3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A29406E1217C67DB6CF588 /* Pods-DemoOfSwift3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOfSwift3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoOfSwift3Tests/Pods-DemoOfSwift3Tests.debug.xcconfig"; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		DB31BA211E08FE22003F6DAF /* DemoOfSwift3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoOfSwift3.entitlements; sourceTree = "<group>"; };
-=======
 		C456F58F1E08DFA600246A0A /* ModelForDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelForDemo.xcdatamodel; sourceTree = "<group>"; };
 		C486CF101E0906D6002F3083 /* Messages+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Messages+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C486CF111E0906D6002F3083 /* Messages+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Messages+CoreDataProperties.swift"; sourceTree = "<group>"; };
->>>>>>> 68a9f4a9084d6dfaee53b4f6531059bbccb805f3
+		DB31BA211E08FE22003F6DAF /* DemoOfSwift3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoOfSwift3.entitlements; sourceTree = "<group>"; };
 		DB61FAEF1E07735600982F39 /* DemoOfSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoOfSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB61FAF21E07735600982F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB61FAF41E07735600982F39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,12 +152,9 @@
 		DB61FAF11E07735600982F39 /* DemoOfSwift3 */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				DB31BA211E08FE22003F6DAF /* DemoOfSwift3.entitlements */,
-=======
 				C486CF101E0906D6002F3083 /* Messages+CoreDataClass.swift */,
 				C486CF111E0906D6002F3083 /* Messages+CoreDataProperties.swift */,
->>>>>>> 68a9f4a9084d6dfaee53b4f6531059bbccb805f3
 				DB61FB221E07D90500982F39 /* TableView */,
 				DB61FAF21E07735600982F39 /* AppDelegate.swift */,
 				DB61FAF41E07735600982F39 /* ViewController.swift */,
