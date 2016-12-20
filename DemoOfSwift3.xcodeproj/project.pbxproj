@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4DE79446566C02CEEA07E234 /* Pods_DemoOfSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318CBA2AD6E089063B3C0528 /* Pods_DemoOfSwift3.framework */; };
 		C117CA01CFC53F76F17BDC39 /* Pods_DemoOfSwift3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB86DED588234F7B41DE872 /* Pods_DemoOfSwift3UITests.framework */; };
+		C456F5901E08DFA600246A0A /* ModelForDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C456F58E1E08DFA600246A0A /* ModelForDemo.xcdatamodeld */; };
 		DB61FAF31E07735600982F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FAF21E07735600982F39 /* AppDelegate.swift */; };
 		DB61FAF51E07735600982F39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61FAF41E07735600982F39 /* ViewController.swift */; };
 		DB61FAF81E07735600982F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB61FAF61E07735600982F39 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		6B429D309CACF661C6A575C8 /* Pods-DemoOfSwift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOfSwift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoOfSwift3/Pods-DemoOfSwift3.release.xcconfig"; sourceTree = "<group>"; };
 		6FB8C508BDEC470992542DB1 /* Pods_DemoOfSwift3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoOfSwift3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A29406E1217C67DB6CF588 /* Pods-DemoOfSwift3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOfSwift3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoOfSwift3Tests/Pods-DemoOfSwift3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C456F58F1E08DFA600246A0A /* ModelForDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelForDemo.xcdatamodel; sourceTree = "<group>"; };
 		DB61FAEF1E07735600982F39 /* DemoOfSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoOfSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB61FAF21E07735600982F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB61FAF41E07735600982F39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				DB61FAFB1E07735600982F39 /* LaunchScreen.storyboard */,
 				DB61FAFE1E07735600982F39 /* Info.plist */,
 				DB61FB201E07ADB700982F39 /* LoginViewController.swift */,
+				C456F58E1E08DFA600246A0A /* ModelForDemo.xcdatamodeld */,
 			);
 			path = DemoOfSwift3;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			files = (
 				DB61FB211E07ADB700982F39 /* LoginViewController.swift in Sources */,
 				DB61FAF51E07735600982F39 /* ViewController.swift in Sources */,
+				C456F5901E08DFA600246A0A /* ModelForDemo.xcdatamodeld in Sources */,
 				DB61FAF31E07735600982F39 /* AppDelegate.swift in Sources */,
 				DB61FB2A1E07DAF200982F39 /* PushMessageCell.swift in Sources */,
 				DB61FB261E07DAA300982F39 /* PushListController.swift in Sources */,
@@ -766,6 +770,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C456F58E1E08DFA600246A0A /* ModelForDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C456F58F1E08DFA600246A0A /* ModelForDemo.xcdatamodel */,
+			);
+			currentVersion = C456F58F1E08DFA600246A0A /* ModelForDemo.xcdatamodel */;
+			path = ModelForDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB61FAE71E07735600982F39 /* Project object */;
 }
