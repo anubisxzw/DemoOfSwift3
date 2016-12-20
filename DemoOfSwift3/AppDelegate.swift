@@ -53,17 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.storeMessage(title: title!, subtitle: body!)
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-        
-        let aps = userInfo["aps"] as? [String:AnyObject]
-        let alert = aps?["alert"] as? [String:AnyObject]
-        let title = alert?["title"] as? String
-        let body = alert?["body"] as? String
-        
-        self.storeMessage(title: title!, subtitle: body!)
-        
-    }
-    
     func storeMessage(title:String, subtitle:String){
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Messages", in: context)
