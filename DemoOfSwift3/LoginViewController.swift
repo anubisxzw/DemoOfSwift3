@@ -50,6 +50,9 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func onClickNormal(_ sender: Any) {
         
+        // キーボードクローズ
+        keyboardClose()
+        
         // count up
         loginCount = loginCount + 1
         counter.text = String(loginCount)

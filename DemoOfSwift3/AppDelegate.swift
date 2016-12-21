@@ -13,7 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let userDefault = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,6 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         print("Device token: \(deviceTokenString)")
+        
+        if (deviceTokenString == userDefault.string(forKey: "DeviceToken")) {
+            print("same")
+        }
+        else {
+            userDefault.set(deviceTokenString, forKey: "DeviceToken")
+        }
         
     }
     
