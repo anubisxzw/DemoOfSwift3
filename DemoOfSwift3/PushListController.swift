@@ -25,40 +25,13 @@ class PushListController: UITableViewController {
     
     override func viewDidLoad() {
         
-//        self.delMessages()
-//        self.storeMessage(title: "title1", subtitle: "subTitle1")
-//        self.storeMessage(title: "title2", subtitle: "subTitle2")
-//        self.storeMessage(title: "title3", subtitle: "subTitle3")
-//        self.storeMessage(title: "title4", subtitle: "subTitle4")
-//        self.storeMessage(title: "title5", subtitle: "subTitle5")
-        
         // レギストセル
         registCells()
-        
-//        let refreshControl = UIRefreshControl()
-//        refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
-//        refreshControl.attributedTitle = NSAttributedString(string: "refresh")
-//        messages.addSubview(refreshControl)
-        
-//        let refreshControl = UIRefreshControl()
-//        if #available(iOS 10.0, *) {
-//            messages.refreshControl = refreshControl
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//        refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
         
         // プッシュのメッセージを取得する
         messageData = getMessages()
         
     }
-    
-//    func refresh() {
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-//            self.messages.reloadData()
-//            self.refreshControl.endRefreshing()
-//        }
-//    }
     
     func storeMessage(title:String, subtitle:String){
         let context = getContext()

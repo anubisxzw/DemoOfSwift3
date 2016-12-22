@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,15 +38,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        print("Device token: \(deviceTokenString)")
+        let urlStr = "http://192.168.253.1:8080/ShinkinBank-web/token/updateTokenInfo/"
+        let header: HTTPHeaders = ["Content-Type":"application/json"]
+        let param = ["token": "\(deviceTokenString)", "device": "0", "pushType": "1"]
         
-        if (deviceTokenString == userDefault.string(forKey: "DeviceToken")) {
-            print("same")
-        }
-        else {
+        if (deviceTokenString != userDefault.string(forKey: "DeviceToken")) {
+            
+            // deviceTokenを退避する
             userDefault.set(deviceTokenString, forKey: "DeviceToken")
+            
+            // deviceToken格納用APIを呼び出す
+            Alamofire.request(urlStr, method: .post, parameters: param, encoding: JSONEncoding.default, headers: header).responseJSON {
+                (response) in
+                
+                guard let JSON = response.result.value else { return }
+                print(JSON)
+                
+            }
         }
-        
+
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {

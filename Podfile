@@ -6,6 +6,8 @@ target 'DemoOfSwift3' do
   use_frameworks!
   
   pod 'NVActivityIndicatorView'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   # Pods for DemoOfSwift3
 
