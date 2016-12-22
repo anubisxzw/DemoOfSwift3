@@ -23,12 +23,12 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         
         let size = CGSize(width: 30, height:30)
         
+        // キーボードクローズ
+        keyboardClose()
+        
         // count up
         loginCount = loginCount + 1
         counter.text = String(loginCount)
-        
-        // キーボードクローズ
-        keyboardClose()
         
         // マスクかけ
         startAnimating(size, message: "Loading...", type: NVActivityIndicatorType.ballSpinFadeLoader)
