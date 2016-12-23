@@ -17,18 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let userDefault = UserDefaults.standard
 
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Clear badge when app is launched
+        application.applicationIconBadgeNumber = 0;
+        
         DispatchQueue.main.async {
-            
-            application.applicationIconBadgeNumber = 0;
-            
             let settings = UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil)
             UIApplication.shared.registerUserNotificationSettings(settings)
         }
+        
         return true
     }
-
+    
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
         if notificationSettings.types != UIUserNotificationType() {
             application.registerForRemoteNotifications()
@@ -64,7 +66,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        let aps = userInfo["aps"] as? [String:AnyObject]
+
+        notificationReceived(notification: userInfo)
+
+    }
+    
+    func notificationReceived(notification: [AnyHashable : Any]) {
+        let aps = notification["aps"] as? [String:AnyObject]
         let alert = aps?["alert"] as? [String:AnyObject]
         let title = alert?["title"] as? String
         let body = alert?["body"] as? String
